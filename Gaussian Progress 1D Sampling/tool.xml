@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<run>
+    <tool>
+        <title>N0610</title>
+        <command>python @tool/main06101.py @driver</command>
+    </tool>
+    <input>
+        <integer id="n_samp">
+            <about>
+                <label>Number of Samples</label>
+            </about>
+            <default>3</default>
+        </integer>
+        <number id="noise_var">
+            <about>
+                <label>Noise Variance</label>
+            </about>
+            <default>1e-12</default>
+        </number>
+        <group id="grou1">
+            <about>
+                <label>X_range</label>
+            </about>
+            <number id="xmin">
+                <about>
+                    <label>min</label>
+                </about>
+                <default>-3</default>
+            </number>
+            <number id="xmax">
+                <about>
+                    <label>max</label>
+                </about>
+                <default>3</default>
+            </number>
+        </group>
+        <group id="grou2">
+            <about>
+                <label>Stength Parameter</label>
+            </about>
+            <number id="lenscale">
+                <about>
+                    <label>length scale</label>
+                </about>
+                <default>1</default>
+            </number>
+            <number id="sigscale">
+                <about>
+                    <label>signal scale</label>
+                </about>
+                <default>1</default>
+            </number>
+        </group>
+    </input>
+    <output>
+        <curve id="cur1">
+            <about>
+                <label>Curve</label>
+            </about>
+            <xaxis>
+                <label>x</label>
+            </xaxis>
+            <yaxis>
+                <label>sita</label>
+            </yaxis>
+        </curve>
+    </output>
+</run>
